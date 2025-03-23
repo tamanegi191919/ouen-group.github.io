@@ -6,7 +6,7 @@
     <title>応援グループ | 応援マルシェ・歯科コンサル・イベント出店</title>
     <meta name="description" content="応援グループは、イベント企画「応援マルシェ」、くじ引き・ドリンク販売・クレープの「フェリス出店」、事務長代行の「歯科コンサル」の3つのサービスを提供しています。">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="   https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* 桜の花びらアニメーション */
         .hero {
@@ -1019,18 +1019,18 @@ HPや院内ツールの見直しが後回しになり、採用や労務作業や
     <section class="contact-form" id="contact-form">
         <div class="container">
             <h2 class="section-title">お問い合わせフォーム</h2>
-            <form id="contactForm" method="post" enctype="text/plain" class="inquiry-form">
+            <form id="contactForm" action="#" method="post" class="inquiry-form">
                 <div class="form-group">
                     <label for="name">お名前 <span class="required">*</span></label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" required autocomplete="name">
                 </div>
                 <div class="form-group">
                     <label for="email">メールアドレス <span class="required">*</span></label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" required autocomplete="email">
                 </div>
                 <div class="form-group">
                     <label for="phone">電話番号</label>
-                    <input type="tel" id="phone" name="phone">
+                    <input type="tel" id="phone" name="phone" autocomplete="tel">
                 </div>
                 <div class="form-group">
                     <label for="inquiry-type">お問い合わせ種別 <span class="required">*</span></label>
@@ -1048,42 +1048,6 @@ HPや院内ツールの見直しが後回しになり、採用や労務作業や
                     <button type="submit" class="btn btn-primary">送信する</button>
                 </div>
             </form>
-            <script>
-                document.getElementById('contactForm').addEventListener('submit', function(event) {
-                    event.preventDefault();
-                    
-                    // 選択された問い合わせ種別に応じてメールアドレスを設定
-                    const inquiryType = document.getElementById('inquiry-type').value;
-                    let mailtoAddress = '';
-                    
-                    if (inquiryType === '応援マルシェ＆イベント出店') {
-                        mailtoAddress = 'feliscrepe.flower@icloud.com';
-                    } else if (inquiryType === '医科歯科事務長代行') {
-                        mailtoAddress = 'iryokeiei.bpa@gmail.com';
-                    } else {
-                        alert('お問い合わせ種別を選択してください');
-                        return;
-                    }
-                    
-                    // フォームの内容を取得
-                    const name = document.getElementById('name').value;
-                    const email = document.getElementById('email').value;
-                    const phone = document.getElementById('phone').value;
-                    const message = document.getElementById('message').value;
-                    
-                    // メール本文を作成
-                    const mailBody = 
-                        `お名前: ${name}%0D%0A` +
-                        `メールアドレス: ${email}%0D%0A` +
-                        `電話番号: ${phone}%0D%0A` +
-                        `お問い合わせ種別: ${inquiryType}%0D%0A` +
-                        `お問い合わせ内容:%0D%0A${message}`;
-                    
-                    // メールリンクを作成して開く
-                    const mailtoLink = `mailto:${mailtoAddress}?subject=ウェブサイトからのお問い合わせ&body=${mailBody}`;
-                    window.location.href = mailtoLink;
-                });
-            </script>
         </div>
     </section>
 
@@ -1111,5 +1075,6 @@ HPや院内ツールの見直しが後回しになり、採用や労務作業や
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="contact-form-fix.js"></script>
 </body>
 </html> 

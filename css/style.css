@@ -29,6 +29,10 @@ a:hover {
 img {
     max-width: 100%;
     height: auto;
+    display: block;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
 }
 
 .container {
@@ -127,46 +131,48 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
-    padding: 0;
-    height: 55px;
+    padding: 5px 0;
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    padding: 5px 0;
-    margin: 0;
+    padding: 2px 0;
 }
 
 .logo-img {
     height: auto;
-    width: 70px;
+    width: 60px;
     object-fit: contain;
-    max-width: none;
     display: block;
-    margin: 2px 0;
 }
 
 nav ul {
     display: flex;
     list-style: none;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 nav ul li {
-    margin-left: 15px;
+    margin-left: 12px;
 }
 
 nav ul li a {
     color: #2c3e50;
     font-weight: 600;
     position: relative;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
+    white-space: nowrap;
+    display: inline-block;
+    padding: 2px 0;
 }
 
 nav ul li a::after {
@@ -194,14 +200,14 @@ nav ul li a:hover::after {
     background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../images/community-bg.jpg');
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     text-align: center;
-    margin-top: 45px;
+    margin-top: 55px;
     position: relative;
     overflow: hidden;
-    padding-top: 30px;
+    padding: 60px 0;
 }
 
 .hero::before {
@@ -553,25 +559,41 @@ footer .container {
 /* レスポンシブデザイン */
 @media (max-width: 1200px) {
     nav ul li {
-        margin-left: 15px;
+        margin-left: 12px;
     }
     
     nav ul li a {
-        font-size: 0.8rem;
+        font-size: 0.78rem;
     }
 }
 
 @media (max-width: 992px) {
+    header {
+        padding: 8px 0;
+    }
+    
     header .container {
-        flex-direction: column;
+        justify-content: space-between;
     }
     
     .logo {
-        margin-bottom: 15px;
+        margin-bottom: 0;
     }
     
     nav {
-        margin-bottom: 15px;
+        margin-bottom: 0;
+    }
+    
+    nav ul {
+        justify-content: flex-end;
+    }
+    
+    nav ul li {
+        margin: 0 6px;
+    }
+    
+    nav ul li a {
+        font-size: 0.75rem;
     }
     
     .category-grid {
@@ -588,18 +610,32 @@ footer .container {
 }
 
 @media (max-width: 768px) {
+    header {
+        padding: 10px 0;
+    }
+    
+    .container {
+        width: 95%;
+        padding: 0 10px;
+    }
+    
     nav ul {
-        flex-wrap: wrap;
         justify-content: center;
+        margin-top: 5px;
+        width: 100%;
     }
     
     nav ul li {
-        margin: 5px 10px;
+        margin: 3px 5px;
+    }
+    
+    nav ul li a {
+        font-size: 0.7rem;
+        padding: 1px 0;
     }
     
     .hero {
-        height: auto;
-        padding: 100px 0;
+        margin-top: 85px;
     }
     
     .main-logo {
@@ -644,6 +680,22 @@ footer .container {
 @media (max-width: 576px) {
     .section-title {
         font-size: 2rem;
+    }
+    
+    .logo-img {
+        width: 50px;
+    }
+    
+    nav ul li {
+        margin: 2px 4px;
+    }
+    
+    nav ul li a {
+        font-size: 0.65rem;
+    }
+    
+    .hero {
+        margin-top: 90px;
     }
     
     .hero-achievement h2 {
@@ -700,13 +752,18 @@ footer .container {
 .service-image {
     flex: 0 0 30%;
     padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .service-image img {
-    width: 50%;
+    width: 100%;
+    max-width: 200px;
     height: auto;
     display: block;
     margin: 0 auto;
+    object-fit: contain;
 }
 
 .service-description {
@@ -742,6 +799,7 @@ footer .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    will-change: opacity;
 }
 
 .achievement-item {
@@ -759,8 +817,14 @@ footer .container {
 
 .achievement-item img {
     width: 100%;
-    height: 200px;
+    height: auto;
+    min-height: 100px;
+    max-height: 200px;
     object-fit: cover;
+    display: block;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+    will-change: opacity;
 }
 
 .achievement-caption {
@@ -939,7 +1003,7 @@ footer .container {
     margin: 0 auto;
 }
 
-/* レスポンシブ対応 */
+/* レスポンシブ対応 - 画像表示の改善 */
 @media (max-width: 992px) {
     .service-content {
         flex-direction: column;
@@ -947,10 +1011,24 @@ footer .container {
     
     .service-image, .service-description {
         flex: 0 0 100%;
+        width: 100%;
+    }
+    
+    .service-image {
+        margin-bottom: 20px;
+    }
+    
+    .service-image img {
+        max-width: 250px;
+        width: 100%;
     }
     
     .achievement-gallery {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .achievement-item img {
+        max-height: 180px;
     }
     
     .representatives-content {
@@ -968,7 +1046,12 @@ footer .container {
 
 @media (max-width: 768px) {
     .achievement-gallery {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .achievement-item img {
+        max-height: 160px;
     }
     
     .qr-code-container {
@@ -977,10 +1060,27 @@ footer .container {
     }
 }
 
+@media (max-width: 576px) {
+    .achievement-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .achievement-item img {
+        max-height: 200px;
+    }
+    
+    .service-image img {
+        max-width: 200px;
+        width: 100%;
+    }
+}
+
 /* お問い合わせフォームのスタイル */
 .contact-form {
     background-color: #fff;
     padding: 60px 0;
+    position: relative;
+    z-index: 2;
 }
 
 .inquiry-form {
@@ -994,6 +1094,7 @@ footer .container {
 
 .form-group {
     margin-bottom: 20px;
+    position: relative;
 }
 
 .form-group label {
@@ -1015,9 +1116,17 @@ footer .container {
     padding: 12px;
     border: 1px solid #ffd1dc;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 16px; /* iOS でのズームを防止 */
     transition: all 0.3s ease;
     background-color: #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transform: translateZ(0); /* ハードウェアアクセラレーション適用 */
+    will-change: border-color; /* パフォーマンス最適化 */
+    touch-action: manipulation; /* タッチイベントの最適化 */
+    z-index: 1;
+    position: relative;
 }
 
 .form-group input:focus,
@@ -1028,6 +1137,15 @@ footer .container {
     box-shadow: 0 0 5px rgba(255, 127, 156, 0.3);
 }
 
+/* セレクトボックスのスタイル改善 */
+.form-group select {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff7f9c' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+    padding-right: 30px;
+}
+
 .form-button {
     text-align: center;
     margin-top: 30px;
@@ -1036,11 +1154,77 @@ footer .container {
 .form-button .btn {
     padding: 15px 50px;
     font-size: 1.1rem;
+    cursor: pointer;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    z-index: 1;
+}
+
+/* 入力エリアのクリック関連の修正 */
+input, select, textarea, button {
+    touch-action: manipulation;
+    cursor: pointer;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
 }
 
 @media (max-width: 768px) {
     .inquiry-form {
         padding: 20px;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px;
+        font-size: 16px; /* iOSでズームを防止 */
+    }
+    
+    .form-button .btn {
+        padding: 12px 40px;
+        font-size: 1rem;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .inquiry-form {
+        padding: 15px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .form-group label {
+        font-size: 14px;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px;
+        font-size: 16px; /* iOSでズームを防止 */
+        border-width: 2px; /* より大きなタッチエリア */
+    }
+    
+    /* iOS 特有の問題に対処 */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+        opacity: 1 !important;
+        -webkit-text-fill-color: #000 !important;
+        color: #000 !important;
+        background-color: #fff !important;
+        box-shadow: 0 0 0 1000px #fff inset !important;
     }
 }
 
@@ -1057,4 +1241,128 @@ footer .container {
 footer .text-logo {
     color: white;
     margin-bottom: 10px;
+}
+
+/* レスポンシブ対応の基本設定 */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ヘッダーロゴの設定 */
+.logo-img {
+    max-width: 180px;
+}
+
+/* メインロゴの設定 */
+.main-logo {
+    max-width: 280px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.hero-logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* スマートフォン用メディアクエリ - 最適化 */
+@media screen and (max-width: 767px) {
+    .hero {
+        min-height: auto;
+        padding: 80px 0 40px;
+    }
+    
+    .main-logo {
+        max-width: 220px;
+    }
+    
+    .logo-img {
+        max-width: 140px;
+    }
+    
+    .hero-content {
+        padding: 20px 10px;
+    }
+    
+    .hero-achievement h2,
+    .hero-description h3 {
+        font-size: 18px;
+        text-align: center;
+    }
+    
+    .hero-achievement {
+        padding: 10px 20px;
+    }
+    
+    .hero-description {
+        padding: 15px;
+    }
+}
+
+/* より小さいスマートフォン用 */
+@media screen and (max-width: 480px) {
+    .hero {
+        padding: 60px 0 30px;
+    }
+    
+    .main-logo {
+        max-width: 180px;
+    }
+    
+    .logo-img {
+        max-width: 120px;
+    }
+    
+    .hero-achievement h2 {
+        font-size: 16px;
+    }
+    
+    .hero-description h3 {
+        font-size: 14px;
+    }
+    
+    .hero-achievement {
+        padding: 8px 15px;
+        margin-bottom: 20px;
+    }
+}
+
+/* フルード画像への対応 */
+.service-image img,
+.achievement-item img {
+    transition: opacity 0.3s ease;
+    opacity: 1;
+    will-change: opacity;
+}
+
+/* フルード画像への対応 */
+.achievement-gallery {
+    will-change: opacity;
+}
+
+@media (max-width: 480px) {
+    .achievement-item {
+        margin-bottom: 15px;
+    }
+    
+    .achievement-item img {
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        max-height: none;
+        aspect-ratio: 16 / 9;
+    }
+    
+    .service-image {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .service-image img {
+        max-width: 200px;
+        width: 100%;
+        height: auto;
+    }
 } 
