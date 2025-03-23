@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="800" viewBox="0 0 1000 800">
+  <rect width="1000" height="800" fill="#f8f9fa"/>
+  
+  <!-- 道路 -->
+  <path d="M0,400 L1000,400" stroke="#ccc" stroke-width="20"/>
+  <path d="M500,0 L500,800" stroke="#ccc" stroke-width="20"/>
+  <path d="M0,200 L1000,200" stroke="#ccc" stroke-width="10"/>
+  <path d="M0,600 L1000,600" stroke="#ccc" stroke-width="10"/>
+  <path d="M200,0 L200,800" stroke="#ccc" stroke-width="10"/>
+  <path d="M800,0 L800,800" stroke="#ccc" stroke-width="10"/>
+  
+  <!-- 交差点 -->
+  <circle cx="200" cy="200" r="15" fill="#ccc"/>
+  <circle cx="200" cy="400" r="15" fill="#ccc"/>
+  <circle cx="200" cy="600" r="15" fill="#ccc"/>
+  <circle cx="500" cy="200" r="15" fill="#ccc"/>
+  <circle cx="500" cy="400" r="25" fill="#ccc"/>
+  <circle cx="500" cy="600" r="15" fill="#ccc"/>
+  <circle cx="800" cy="200" r="15" fill="#ccc"/>
+  <circle cx="800" cy="400" r="15" fill="#ccc"/>
+  <circle cx="800" cy="600" r="15" fill="#ccc"/>
+  
+  <!-- 建物 - 歯科医院 -->
+  <rect x="250" y="250" width="100" height="80" fill="#0088cc" opacity="0.2" stroke="#0088cc" stroke-width="2"/>
+  <rect x="650" y="450" width="100" height="80" fill="#0088cc" opacity="0.2" stroke="#0088cc" stroke-width="2"/>
+  <rect x="350" y="650" width="100" height="80" fill="#0088cc" opacity="0.2" stroke="#0088cc" stroke-width="2"/>
+  
+  <!-- 建物 - 一般 -->
+  <rect x="100" y="100" width="60" height="60" fill="#ddd" stroke="#aaa" stroke-width="1"/>
+  <rect x="300" y="100" width="60" height="60" fill="#ddd" stroke="#aaa" stroke-width="1"/>
+  <rect x="600" y="100" width="60" height="60" fill="#ddd" stroke="#aaa" stroke-width="1"/>
+  <rect x="850" y="100" width="60" height="60" fill="#ddd" stroke="#aaa" stroke-width="1"/>
+  <rect x="100" y="300" width="60" height="60" fill="#ddd" stroke="#aaa" stroke-width="1"/>
+  <rect x="600" y="300" width="60" height="60" fill="#ddd" stroke="#aaa" stroke-width="1"/>
+  <rect x="850" y="300" width="60" height="60" fill="#ddd" stroke="#aaa" stroke-width="1"/>
+  <rect x="100" y="500" width="60" height="60" fill="#ddd" stroke="#aaa" stroke-width="1"/>
+  <rect x="300" y="500" width="60" height="60" fill="#ddd" stroke="#aaa" stroke-width="1"/>
+  <rect x="850" y="500" width="60" height="60" fill="#ddd" stroke="#aaa" stroke-width="1"/>
+  <rect x="100" y="700" width="60" height="60" fill="#ddd" stroke="#aaa" stroke-width="1"/>
+  <rect x="600" y="700" width="60" height="60" fill="#ddd" stroke="#aaa" stroke-width="1"/>
+  <rect x="850" y="700" width="60" height="60" fill="#ddd" stroke="#aaa" stroke-width="1"/>
+  
+  <!-- 公園 -->
+  <circle cx="400" cy="100" r="40" fill="#c8e6c9" stroke="#81c784" stroke-width="1"/>
+  <circle cx="700" cy="200" r="40" fill="#c8e6c9" stroke="#81c784" stroke-width="1"/>
+  <circle cx="300" cy="400" r="40" fill="#c8e6c9" stroke="#81c784" stroke-width="1"/>
+  <circle cx="700" cy="600" r="40" fill="#c8e6c9" stroke="#81c784" stroke-width="1"/>
+  <circle cx="500" cy="700" r="40" fill="#c8e6c9" stroke="#81c784" stroke-width="1"/>
+  
+  <!-- 川 -->
+  <path d="M0,300 Q250,350 500,300 Q750,250 1000,300" stroke="#bbdefb" stroke-width="30" fill="none"/>
+  
+  <!-- 歯科事務長の拠点 -->
+  <rect x="450" y="450" width="100" height="100" fill="#e74c3c" opacity="0.3" stroke="#e74c3c" stroke-width="3"/>
+  <text x="500" y="500" font-family="Arial" font-size="12" text-anchor="middle" fill="#e74c3c">Mr.歯科事務長</text>
+  
+  <!-- 連結線 - 歯科医院と拠点を結ぶ -->
+  <path d="M300,290 Q400,370 450,500" stroke="#0088cc" stroke-width="2" stroke-dasharray="5,5" fill="none"/>
+  <path d="M650,490 Q600,500 550,500" stroke="#0088cc" stroke-width="2" stroke-dasharray="5,5" fill="none"/>
+  <path d="M400,650 Q430,580 480,550" stroke="#0088cc" stroke-width="2" stroke-dasharray="5,5" fill="none"/>
+</svg> 

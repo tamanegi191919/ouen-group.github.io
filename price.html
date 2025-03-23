@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>医科歯科事務長代行(3BPA) | 料金プラン</title>
+    <meta name="description" content="応援グループが提供する医科歯科事務長代行(3BPA)の料金プランをご紹介します。ワンオペ院向けと10人以上の医院向けのプランをご用意。今なら最初の5医院限定で50%OFFキャンペーン実施中！初回相談60分無料！">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* 料金プラン専用スタイル */
+        .price-plans {
+            margin: 40px 0;
+        }
+        
+        .price-plan {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+        
+        .price-plan:hover {
+            transform: translateY(-5px);
+        }
+        
+        .price-plan-header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .price-plan-title {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .price-plan-cost {
+            font-size: 36px;
+            color: #FF6B6B;
+            font-weight: bold;
+        }
+        
+        .price-plan-cost .period {
+            font-size: 16px;
+            color: #888;
+        }
+        
+        .price-plan-features {
+            margin-bottom: 25px;
+        }
+        
+        .price-plan-features li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .price-plan-features li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: #4CAF50;
+            position: absolute;
+            left: 0;
+        }
+        
+        .recommended {
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #4CAF50;
+        }
+        
+        .recommended:before {
+            content: "おすすめ";
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            transform: rotate(45deg);
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 40px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .price-note {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        
+        .price-note h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .contact-button {
+            display: inline-block;
+            background-color: #FF6B6B;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 15px;
+        }
+        
+        .contact-button:hover {
+            background-color: #e55b5b;
+        }
+        
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .price-table th, .price-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .price-table th {
+            background-color: #f5f5f5;
+        }
+        
+        /* スポットプランアイテム */
+        .spot-plan-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            padding: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .spot-plan-title {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .spot-plan-price {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .trial-price {
+            font-size: 22px;
+            font-weight: bold;
+            color: #FF6B6B;
+            margin-right: 15px;
+        }
+        
+        .regular-price {
+            font-size: 16px;
+            color: #888;
+            text-decoration: line-through;
+        }
+        
+        .spot-plan-description {
+            color: #666;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        
+        /* カテゴリブロック */
+        .plan-category {
+            background-color: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-left: 5px solid #4e73df;
+        }
+        
+        .plan-category-title {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 5px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .plan-category-purpose {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+        
+        /* キャンペーンバナー */
+        .campaign-banner {
+            background: linear-gradient(135deg, #FF6B6B 0%, #FFE66D 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .campaign-banner h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .campaign-banner p {
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+        
+        .campaign-banner:before {
+            content: "50% OFF";
+            position: absolute;
+            top: 10px;
+            right: -30px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 40px;
+            font-size: 16px;
+            font-weight: bold;
+            transform: rotate(45deg);
+        }
+        
+        /* 継続プランのスタイル */
+        .continuous-plan {
+            background-color: #f0f7ff;
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 30px;
+            border: 2px solid #4e73df;
+        }
+        
+        .continuous-plan-title {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .continuous-plan-price {
+            font-size: 28px;
+            font-weight: bold;
+            color: #4e73df;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .regular-price-monthly {
+            font-size: 18px;
+            color: #888;
+            text-decoration: line-through;
+            display: block;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .continuous-plan-description {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 16px;
+            color: #555;
+        }
+        
+        /* 初回相談無料バナー */
+        .free-consultation-banner {
+            background: linear-gradient(135deg, #4e73df 0%, #36b9cc 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin: 20px 0 30px 0;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .free-consultation-banner h3 {
+            font-size: 24px;
+            margin-bottom: 5px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .free-consultation-banner p {
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+        
+        /* 追加説明 */
+        .additional-note {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+            margin-top: 5px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="応援グループ" class="logo-img">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#about">会社概要</a></li>
+                    <li><a href="index.html#services">サービス</a></li>
+                    <li><a href="index.html#representatives">代表紹介</a></li>
+                    <li><a href="index.html#contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- メインビジュアル -->
+    <section class="page-header">
+        <div class="container">
+            <h1>歯科医院向けコンサルティング 料金プラン</h1>
+            <p>医院の規模や課題に合わせた最適なプランをお選びいただけます</p>
+        </div>
+    </section>
+
+    <!-- キャンペーンバナー -->
+    <div class="container">
+        <div class="campaign-banner">
+            <h3>期間限定キャンペーン実施中！</h3>
+            <p>最初の5医院限定で、全プラン通常価格の50%OFFでご提供します。</p>
+        </div>
+        
+        <!-- 初回相談無料バナー -->
+        <div class="free-consultation-banner">
+            <h3>初回相談60分無料！</h3>
+            <p>まずはお気軽にご相談ください。医院の課題やお悩みをヒアリングし、最適なプランをご提案いたします。</p>
+        </div>
+    </div>
+
+    <!-- 料金プラン紹介 -->
+    <section class="price-content">
+        <div class="container">
+            <h2 class="section-title">料金プラン</h2>
+            
+            <div class="intro-text">
+                <p>医院の規模や抱える課題によって最適なプランは異なります。医科歯科事務長代行(3BPA)では、「ワンオペ院向け（院長1人の医院）」と「スタッフ10人以上の医院・法人向け」に分けて、それぞれに最適なプランをご用意しています。</p>
+            </div>
+            
+            <!-- ワンオペ院向け -->
+            <div class="plan-category">
+                <h3 class="plan-category-title">1. ワンオペ院向け（院長1人の医院）</h3>
+                <p class="plan-category-purpose">目的：忙しすぎる院長の負担を減らし、効率よく収益を上げる</p>
+                
+                <h4><i class="fas fa-lightbulb"></i> スポットプラン（単発コンサル）</h4>
+                
+                <div class="spot-plan-item">
+                    <div class="spot-plan-title">負担軽減・診療効率UP</div>
+                    <div class="spot-plan-price">
+                        <div class="trial-price">お試し価格: ¥20,000</div>
+                        <div class="regular-price">(通常価格: ¥40,000)</div>
+                    </div>
+                    <div class="spot-plan-description">90分コンサル＋後日業務効率化マニュアル提供</div>
+                </div>
+                
+                <div class="spot-plan-item">
+                    <div class="spot-plan-title">1ヶ月採用代行（受付助手・衛生士）</div>
+                    <div class="spot-plan-price">
+                        <div class="trial-price">お試し価格: ¥50,000</div>
+                        <div class="regular-price">(通常価格: ¥80,000)</div>
+                    </div>
+                    <div class="spot-plan-description">求人戦略＋最大2人面接と内定まで</div>
+                </div>
+                
+                <div class="spot-plan-item">
+                    <div class="spot-plan-title">労務・労働時間最適化</div>
+                    <div class="spot-plan-price">
+                        <div class="trial-price">お試し価格: ¥25,000</div>
+                        <div class="regular-price">(通常価格: ¥50,000)</div>
+                    </div>
+                    <div class="spot-plan-description">現状分析＋改善策の提案</div>
+                </div>
+                
+                <div class="continuous-plan">
+                    <h4 class="continuous-plan-title">継続プラン（3ヶ月サポート）</h4>
+                    <div class="regular-price-monthly">通常価格: ¥79,600/月</div>
+                    <div class="continuous-plan-price">お試し価格: ¥39,800/月</div>
+                    <div class="continuous-plan-description">毎月1回訪問＋院に合わせた業務改善支援</div>
+                </div>
+            </div>
+            
+            <!-- スタッフ10人以上の医院向け -->
+            <div class="plan-category">
+                <h3 class="plan-category-title">2. スタッフ10人以上の医院・法人向け</h3>
+                <p class="plan-category-purpose">目的：スタッフが定着し、医院の評判を上げて安定成長</p>
+                
+                <h4><i class="fas fa-lightbulb"></i> スポットプラン（単発コンサル）</h4>
+                
+                <div class="spot-plan-item">
+                    <div class="spot-plan-title">採用母数引き上げ</div>
+                    <div class="spot-plan-price">
+                        <div class="trial-price">お試し価格: ¥40,000</div>
+                        <div class="regular-price">(通常価格: ¥80,000)</div>
+                    </div>
+                    <div class="spot-plan-description">採用戦略の立案と実施サポート</div>
+                </div>
+                
+                <div class="spot-plan-item">
+                    <div class="spot-plan-title">口コミ対策（Google・紹介）</div>
+                    <div class="spot-plan-price">
+                        <div class="trial-price">お試し価格: ¥20,000</div>
+                        <div class="regular-price">(通常価格: ¥40,000)</div>
+                    </div>
+                    <div class="spot-plan-description">口コミ増加戦略の構築と実施</div>
+                </div>
+                
+                <div class="spot-plan-item">
+                    <div class="spot-plan-title">院内研修</div>
+                    <div class="spot-plan-price">
+                        <div class="trial-price">お試し価格: ¥50,000</div>
+                        <div class="regular-price">(通常価格: ¥100,000)</div>
+                    </div>
+                    <div class="spot-plan-description">課題に合わせた院内研修の実施</div>
+                </div>
+                
+                <div class="spot-plan-item">
+                    <div class="spot-plan-title">事務長代行（院長の負担軽減）</div>
+                    <div class="spot-plan-price">
+                        <div class="trial-price">お試し価格: ¥45,000</div>
+                        <div class="regular-price">(通常価格: ¥90,000)</div>
+                    </div>
+                    <div class="spot-plan-description">業務整理＋マネジメント指導</div>
+                </div>
+                
+                <div class="continuous-plan">
+                    <h4 class="continuous-plan-title">継続プラン（3ヶ月サポート）</h4>
+                    <div class="regular-price-monthly">通常価格: ¥79,600/月</div>
+                    <div class="continuous-plan-price">お試し価格: ¥39,800/月</div>
+                    <div class="continuous-plan-description">毎月1回訪問＋法人や院に合わせた業務改善支援</div>
+                </div>
+            </div>
+            
+            <!-- その他相談事項 -->
+            <div class="plan-category">
+                <h3 class="plan-category-title">3. その他相談事項</h3>
+                <p class="plan-category-purpose">目的：専門知識を活かした個別サービスで医院の価値を高める</p>
+                
+                <h4><i class="fas fa-lightbulb"></i> スポットプラン（単発サービス）</h4>
+                
+                <div class="spot-plan-item">
+                    <div class="spot-plan-title">HP作成</div>
+                    <div class="spot-plan-price">
+                        <div class="trial-price">お試し価格: ¥80,000</div>
+                        <div class="regular-price">(通常価格: ¥160,000)</div>
+                    </div>
+                    <div class="spot-plan-description">医院の魅力を伝えるホームページ制作</div>
+                    <span class="additional-note">※本サイトも代表が作成</span>
+                </div>
+                
+                <div class="spot-plan-item">
+                    <div class="spot-plan-title">評価制度導入</div>
+                    <div class="spot-plan-price">
+                        <div class="trial-price">お試し価格: ¥80,000</div>
+                        <div class="regular-price">(通常価格: ¥160,000)</div>
+                    </div>
+                    <div class="spot-plan-description">スタッフのモチベーション向上と能力発揮のための評価制度構築</div>
+                    <span class="additional-note">※導入実績過去にも多数</span>
+                </div>
+                
+                <div class="spot-plan-item">
+                    <div class="spot-plan-title">SNS指導</div>
+                    <div class="spot-plan-price">
+                        <div class="trial-price">お試し価格: ¥20,000</div>
+                        <div class="regular-price">(通常価格: ¥40,000)</div>
+                    </div>
+                    <div class="spot-plan-description">Instagram・Facebook等を活用した集患・ブランディング戦略</div>
+                    <span class="additional-note">※応援グループ総SNSフォロワー数3,000</span>
+                </div>
+            </div>
+            
+            <div class="price-note">
+                <h3>キャンペーンについて</h3>
+                <p>現在、最初の5医院限定で全プランが通常価格の50%OFFでご利用いただけます。この機会にぜひお試しください。</p>
+                <p>※キャンペーン適用の5医院が埋まり次第、通常価格に戻ります。</p>
+                <a href="index.html#contact" class="contact-button">無料相談のお申し込み</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 選ばれる理由 -->
+    <section class="reasons">
+        <div class="container">
+            <h2 class="section-title">選ばれる理由</h2>
+            
+            <div class="reason-item">
+                <div class="reason-icon">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="reason-content">
+                    <h3>実務経験豊富な専門家がサポート</h3>
+                    <p>150名を超える歯科法人での実務経験を持つ代表が直接対応します。理論だけでなく、実践的なノウハウを提供します。</p>
+                </div>
+            </div>
+            
+            <div class="reason-item">
+                <div class="reason-icon">
+                    <i class="fas fa-clipboard-check"></i>
+                </div>
+                <div class="reason-content">
+                    <h3>医院の状況に合わせたオーダーメイドプラン</h3>
+                    <p>規模や課題に応じて必要なサポートを選べます。ワンオペ院から複数スタッフの医院まで、それぞれの課題に対応します。</p>
+                </div>
+            </div>
+            
+            <div class="reason-item">
+                <div class="reason-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="reason-content">
+                    <h3>短期間で実感できる効果</h3>
+                    <p>採用や業務効率化など、具体的な成果につながる施策を優先的に実施。スピーディーに改善効果を実感いただけます。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- よくある質問 -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">よくある質問</h2>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">初回相談は本当に無料ですか？</h3>
+                <div class="faq-answer">
+                    <p>はい、初回の60分相談は完全無料です。医院様の課題やお悩みをヒアリングし、どのようなサポートが最適かをご提案します。無理な営業は一切行いませんので、お気軽にご相談ください。</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">キャンペーン価格はいつまで適用されますか？</h3>
+                <div class="faq-answer">
+                    <p>最初に申し込まれた5医院様限定の特別価格となります。契約期間中はキャンペーン価格が適用されます。5医院様の枠が埋まり次第、通常価格での提供となりますので、お早めにご検討ください。</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">継続プランを契約するとどのようなサポートが受けられますか？</h3>
+                <div class="faq-answer">
+                    <p>継続プランでは、毎月1回の訪問コンサルティングに加え、お電話やメールでのサポート、緊急時の対応など、医院の状況に合わせた総合的な支援が含まれます。医院ごとの課題に合わせて、採用支援、業務効率化、スタッフ教育など、必要なサポートを組み合わせて提供します。</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">スポットプランと継続プランの違いは何ですか？</h3>
+                <div class="faq-answer">
+                    <p>スポットプランは特定の課題に対して1回限りのコンサルティングを行うプランで、すぐに解決したい課題がある場合に適しています。一方、継続プランは3ヶ月間の継続的なサポートを行うプランで、複数の課題を計画的に解決していきたい場合や、長期的な医院の成長をサポートしてほしい場合に適しています。</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">対応エリアはどこまでですか？</h3>
+                <div class="faq-answer">
+                    <p>関西（大阪、京都、奈良、兵庫）を中心に対応しておりますが、オンラインでのサポートであれば全国対応可能です。訪問が必要な場合でも、関東や九州など遠方でも対応可能ですので、まずはご相談ください。</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">効果はどのくらいで実感できますか？</h3>
+                <div class="faq-answer">
+                    <p>課題によって異なりますが、採用課題であれば1〜2ヶ月、口コミ対策は3〜6ヶ月程度で効果が表れ始めることが多いです。業務効率化については、施策導入後すぐに効果を実感されるケースが多いです。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- お問い合わせセクション -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-title">お問い合わせ</h2>
+            <p class="contact-lead">料金プランについてのご質問や、無料相談のお申し込みはこちらから</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>iryokeiei.bpa@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>奈良県生駒市</p>
+                </div>
+            </div>
+            
+            <div class="qr-code-container">
+                <div class="qr-code-item">
+                    <p>公式LINE</p>
+                    <div class="qr-code">
+                        <img src="images/dental-line-qr.png" alt="歯科コンサル LINE QRコード">
+                    </div>
+                </div>
+            </div>
+            
+            <a href="index.html#contact-form" class="contact-button large">お問い合わせフォームへ</a>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="応援グループ">
+                    <p>地域と共に歩む応援グループ</p>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="index.html#about">会社概要</a></li>
+                        <li><a href="index.html#services">サービス</a></li>
+                        <li><a href="index.html#representatives">代表紹介</a></li>
+                        <li><a href="index.html#contact">お問い合わせ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2021 応援グループ All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 

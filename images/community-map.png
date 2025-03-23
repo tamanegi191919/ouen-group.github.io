@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <!-- 背景 -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- 地図の背景 -->
+  <path d="M100,100 L700,100 L700,500 L100,500 Z" fill="#e6f7ff"/>
+  
+  <!-- 道路 -->
+  <path d="M150,100 L150,500" stroke="#ccc" stroke-width="10"/>
+  <path d="M300,100 L300,500" stroke="#ccc" stroke-width="10"/>
+  <path d="M450,100 L450,500" stroke="#ccc" stroke-width="10"/>
+  <path d="M600,100 L600,500" stroke="#ccc" stroke-width="10"/>
+  
+  <path d="M100,150 L700,150" stroke="#ccc" stroke-width="10"/>
+  <path d="M100,300 L700,300" stroke="#ccc" stroke-width="10"/>
+  <path d="M100,450 L700,450" stroke="#ccc" stroke-width="10"/>
+  
+  <!-- 歯科医院のマーカー -->
+  <circle cx="150" cy="150" r="15" fill="#0088cc"/>
+  <text x="150" y="150" font-family="Arial" font-size="10" text-anchor="middle" fill="white" dy="3">A</text>
+  
+  <circle cx="300" cy="150" r="15" fill="#0088cc"/>
+  <text x="300" y="150" font-family="Arial" font-size="10" text-anchor="middle" fill="white" dy="3">B</text>
+  
+  <circle cx="450" cy="150" r="15" fill="#0088cc"/>
+  <text x="450" y="150" font-family="Arial" font-size="10" text-anchor="middle" fill="white" dy="3">C</text>
+  
+  <circle cx="150" cy="300" r="15" fill="#0088cc"/>
+  <text x="150" y="300" font-family="Arial" font-size="10" text-anchor="middle" fill="white" dy="3">D</text>
+  
+  <circle cx="450" cy="300" r="15" fill="#0088cc"/>
+  <text x="450" y="300" font-family="Arial" font-size="10" text-anchor="middle" fill="white" dy="3">E</text>
+  
+  <circle cx="600" cy="300" r="15" fill="#0088cc"/>
+  <text x="600" y="300" font-family="Arial" font-size="10" text-anchor="middle" fill="white" dy="3">F</text>
+  
+  <circle cx="300" cy="450" r="15" fill="#0088cc"/>
+  <text x="300" y="450" font-family="Arial" font-size="10" text-anchor="middle" fill="white" dy="3">G</text>
+  
+  <circle cx="600" cy="450" r="15" fill="#0088cc"/>
+  <text x="600" y="450" font-family="Arial" font-size="10" text-anchor="middle" fill="white" dy="3">H</text>
+  
+  <!-- 接続線 -->
+  <path d="M150,165 L150,285" stroke="#0088cc" stroke-width="2" stroke-dasharray="5,5"/>
+  <path d="M300,165 L300,435" stroke="#0088cc" stroke-width="2" stroke-dasharray="5,5"/>
+  <path d="M450,165 L450,285" stroke="#0088cc" stroke-width="2" stroke-dasharray="5,5"/>
+  <path d="M600,315 L600,435" stroke="#0088cc" stroke-width="2" stroke-dasharray="5,5"/>
+  <path d="M165,150 L285,150" stroke="#0088cc" stroke-width="2" stroke-dasharray="5,5"/>
+  <path d="M315,150 L435,150" stroke="#0088cc" stroke-width="2" stroke-dasharray="5,5"/>
+  <path d="M165,300 L435,300" stroke="#0088cc" stroke-width="2" stroke-dasharray="5,5"/>
+  <path d="M465,300 L585,300" stroke="#0088cc" stroke-width="2" stroke-dasharray="5,5"/>
+  <path d="M315,450 L585,450" stroke="#0088cc" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- タイトル -->
+  <text x="400" y="50" font-family="Arial" font-size="20" text-anchor="middle" fill="#0088cc">Mr.歯科事務長 サポート医院マップ</text>
+  
+  <!-- 凡例 -->
+  <circle cx="650" cy="550" r="10" fill="#0088cc"/>
+  <text x="670" y="555" font-family="Arial" font-size="12" fill="#333">サポート医院</text>
+</svg> 
