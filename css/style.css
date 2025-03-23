@@ -1343,26 +1343,20 @@ img {
 }
 
 @media (max-width: 480px) {
-    .achievement-item {
-        margin-bottom: 15px;
-    }
-    
     .achievement-item img {
-        width: 100%;
+        width: auto;
+        max-width: 85%;
         height: auto;
-        min-height: auto;
-        max-height: none;
-        aspect-ratio: 16 / 9;
+        max-height: 300px;
+        object-fit: contain !important;
+        margin: 0 auto 15px;
     }
     
-    .service-image {
-        width: 100%;
-        padding: 10px;
-    }
-    
+    .representative-image img,
     .service-image img {
-        max-width: 200px;
-        width: 100%;
+        width: auto;
+        max-width: 100%;
         height: auto;
+        object-fit: contain !important;
     }
 } 
